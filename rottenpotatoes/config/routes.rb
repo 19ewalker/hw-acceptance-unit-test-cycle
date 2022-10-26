@@ -4,4 +4,5 @@ Rottenpotatoes::Application.routes.draw do
   resources :movies do
     get 'search_directors', on: :member
   end
+  
 end

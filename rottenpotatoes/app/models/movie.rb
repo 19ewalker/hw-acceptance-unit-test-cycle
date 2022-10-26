@@ -1,10 +1,12 @@
 class Movie < ActiveRecord::Base
   def self.search_directors(id)
     movie = self.find(id)
-    if movie.director.empty?
+    same_director = movie['director']
+    if same_director.empty?
       return []
     else
-      return [movie]
+      movies = Movie.where(director: same_director)
     end
+    return movies
   end
 end

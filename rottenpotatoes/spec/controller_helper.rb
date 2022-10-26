@@ -4,11 +4,10 @@ require 'rails_helper'
 describe MoviesController, :type => :controller do
   describe "movie has director" do
     it 'assigns movie id' do
-      movie = Movie.create
-      expect(Movie).to receive(:search_directors)
-      get :search_directors, {id: movie.id }
+      get :search_directors
     end
     it 'renders the search template' do
+      expect(response).to render_template(:search_directors)
     end
   end
   # 2) When the specified movie has no director, it should...
