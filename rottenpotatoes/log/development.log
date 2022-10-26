@@ -66,3 +66,373 @@ Migrating to AddDirectorToMovies (20221022050525)
   [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (74.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20221022050525')
   [1m[36m (68.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (61.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime, "director" varchar) [0m
+  [1m[35m (56.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (58.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (64.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20221022050525')
+  [1m[36m (61.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aladdin"], ["rating", "G"], ["release_date", "1992-11-25 00:00:00.000000"], ["created_at", "2022-10-22 14:01:41.295926"], ["updated_at", "2022-10-22 14:01:41.295926"]]
+  [1m[35m (52.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Terminator"], ["rating", "R"], ["release_date", "1984-10-26 00:00:00.000000"], ["created_at", "2022-10-22 14:01:41.349773"], ["updated_at", "2022-10-22 14:01:41.349773"]]
+  [1m[36m (56.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "When Harry Met Sally"], ["rating", "R"], ["release_date", "1989-07-21 00:00:00.000000"], ["created_at", "2022-10-22 14:01:41.407204"], ["updated_at", "2022-10-22 14:01:41.407204"]]
+  [1m[35m (55.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Help"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2022-10-22 14:01:41.464054"], ["updated_at", "2022-10-22 14:01:41.464054"]]
+  [1m[36m (55.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chocolat"], ["rating", "PG-13"], ["release_date", "2001-01-05 00:00:00.000000"], ["created_at", "2022-10-22 14:01:41.520701"], ["updated_at", "2022-10-22 14:01:41.520701"]]
+  [1m[35m (52.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Amelie"], ["rating", "R"], ["release_date", "2001-04-25 00:00:00.000000"], ["created_at", "2022-10-22 14:01:41.574588"], ["updated_at", "2022-10-22 14:01:41.574588"]]
+  [1m[36m (53.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "2001: A Space Odyssey"], ["rating", "G"], ["release_date", "1968-04-06 00:00:00.000000"], ["created_at", "2022-10-22 14:01:41.628913"], ["updated_at", "2022-10-22 14:01:41.628913"]]
+  [1m[35m (57.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Incredibles"], ["rating", "PG"], ["release_date", "2004-11-05 00:00:00.000000"], ["created_at", "2022-10-22 14:01:41.686842"], ["updated_at", "2022-10-22 14:01:41.686842"]]
+  [1m[36m (51.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1981-06-12 00:00:00.000000"], ["created_at", "2022-10-22 14:01:41.739459"], ["updated_at", "2022-10-22 14:01:41.739459"]]
+  [1m[35m (60.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Chicken Run"], ["rating", "G"], ["release_date", "2000-06-21 00:00:00.000000"], ["created_at", "2022-10-22 14:01:41.800328"], ["updated_at", "2022-10-22 14:01:41.800328"]]
+  [1m[36m (51.5ms)[0m  [1mcommit transaction[0m
+  [1m[36m (50.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime, "director" varchar) [0m
+  [1m[35m (57.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (63.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (63.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20221022050525')
+  [1m[36m (59.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+
+
+Started GET "/" for 160.39.158.153 at 2022-10-22 14:07:50 +0000
+
+
+Started GET "/movies" for 160.39.158.153 at 2022-10-22 14:07:50 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.0ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 255ms (Views: 240.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 160.39.158.153 at 2022-10-22 14:07:51 +0000
+
+
+Started GET "/movies/1" for 160.39.158.153 at 2022-10-22 14:07:53 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/new" for 160.39.158.153 at 2022-10-22 14:07:58 +0000
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 160.39.158.213 at 2022-10-24 20:05:05 +0000
+
+
+Started GET "/movies" for 160.39.158.213 at 2022-10-24 20:05:05 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.5ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 231ms (Views: 207.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 160.39.158.213 at 2022-10-24 20:05:05 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 160.39.158.213 at 2022-10-24 20:05:05 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 160.39.158.213 at 2022-10-24 20:05:06 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 160.39.158.213 at 2022-10-24 20:05:06 +0000
+
+
+Started GET "/movies/1" for 160.39.158.213 at 2022-10-24 20:05:08 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1/edit" for 160.39.158.213 at 2022-10-24 20:05:10 +0000
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/edit.html.erb within layouts/application (35.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 160.39.158.213 at 2022-10-24 20:08:25 +0000
+
+
+Started GET "/movies" for 160.39.158.213 at 2022-10-24 20:08:25 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.7ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (18.4ms)
+  Rendered layouts/_flash.erb (0.6ms)
+Completed 200 OK in 343ms (Views: 318.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/movies/1" for 160.39.158.213 at 2022-10-24 20:08:30 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1/edit" for 160.39.158.213 at 2022-10-24 20:08:31 +0000
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/edit.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 160.39.158.213 at 2022-10-24 20:26:01 +0000
+
+
+Started GET "/movies" for 160.39.158.213 at 2022-10-24 20:26:02 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.4ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 194ms (Views: 171.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies/1" for 160.39.158.213 at 2022-10-24 20:26:04 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1/edit" for 160.39.158.213 at 2022-10-24 20:26:05 +0000
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/edit.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 160.39.158.213 at 2022-10-24 20:26:11 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (27.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 160.39.158.213 at 2022-10-24 20:34:21 +0000
+
+
+Started GET "/movies" for 160.39.158.213 at 2022-10-24 20:34:21 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (3.6ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 171ms (Views: 152.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/movies/1" for 160.39.158.213 at 2022-10-24 20:34:27 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1/edit" for 160.39.158.213 at 2022-10-24 20:34:29 +0000
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/edit.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/movies/1" for 160.39.158.213 at 2022-10-24 20:34:40 +0000
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rp6f1keVlJ3of6rgClS57dq+9UwXgHZM+8ueu8BrD5EcbCVtJUuJ7IF2NvW9ZX3nVdYtapvIlzmGGKCbdlYHXg==", "movie"=>{"title"=>"Aladdin", "rating"=>"G", "director"=>"Robin Williams", "release_date(1i)"=>"1992", "release_date(2i)"=>"11", "release_date(3i)"=>"25"}, "commit"=>"Update Movie Info", "id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "movies" SET "director" = ?, "updated_at" = ? WHERE "movies"."id" = ?  [["director", "Robin Williams"], ["updated_at", "2022-10-24 20:34:40.491557"], ["id", 1]]
+  [1m[36m (57.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://abrahamgibson-ravioliparlor-3000.codio.io/movies/1
+Completed 302 Found in 60ms (ActiveRecord: 57.8ms)
+
+
+Started GET "/movies/1" for 160.39.158.213 at 2022-10-24 20:34:41 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 160.39.158.213 at 2022-10-24 20:34:43 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for 160.39.158.213 at 2022-10-24 20:35:25 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 193ms (Views: 158.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies/1/edit" for 160.39.158.213 at 2022-10-24 20:35:26 +0000
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/edit.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 160.39.158.213 at 2022-10-24 20:35:35 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 160.39.158.213 at 2022-10-24 20:36:42 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 225ms (Views: 203.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/3" for 160.39.158.213 at 2022-10-24 20:36:45 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/3/edit" for 160.39.158.213 at 2022-10-24 20:36:46 +0000
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered movies/edit.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/movies/3" for 160.39.158.213 at 2022-10-24 20:37:11 +0000
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eojP7gJ8NZYkd9Cynmuf2IGopxuko2YzgTShKHJNoTsgenVVYKIo501+TKcpWlvSDsB/PSjrh0b8558IxHCp9A==", "movie"=>{"title"=>"When Harry Met Sally", "rating"=>"R", "director"=>"Rob Reiner", "release_date(1i)"=>"1989", "release_date(2i)"=>"7", "release_date(3i)"=>"21"}, "commit"=>"Update Movie Info", "id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "movies" SET "director" = ?, "updated_at" = ? WHERE "movies"."id" = ?  [["director", "Rob Reiner"], ["updated_at", "2022-10-24 20:37:11.742696"], ["id", 3]]
+  [1m[36m (70.6ms)[0m  [1mcommit transaction[0m
+Redirected to https://abrahamgibson-ravioliparlor-3000.codio.io/movies/3
+Completed 302 Found in 83ms (ActiveRecord: 71.1ms)
+
+
+Started GET "/movies/3" for 160.39.158.213 at 2022-10-24 20:37:11 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 160.39.158.213 at 2022-10-24 20:37:14 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.9ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 160.39.159.209 at 2022-10-24 21:55:25 +0000
+
+
+Started GET "/movies" for 160.39.159.209 at 2022-10-24 21:55:25 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.0ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 202ms (Views: 187.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/2" for 160.39.159.209 at 2022-10-24 21:55:29 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/2/edit" for 160.39.159.209 at 2022-10-24 21:55:34 +0000
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/edit.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/movies/2" for 160.39.159.209 at 2022-10-24 21:55:49 +0000
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nzyNi69ngOkHMoQrLGt9LK4Q8V0zG5+7fBpdAwi/cYjFzjcwzbmdmG47GD6bWrkmIXgpe79Tfs4ByWMjvoJ5Rw==", "movie"=>{"title"=>"The Terminator", "rating"=>"R", "director"=>"James Cameron", "release_date(1i)"=>"1984", "release_date(2i)"=>"10", "release_date(3i)"=>"26"}, "commit"=>"Update Movie Info", "id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "movies" SET "director" = ?, "updated_at" = ? WHERE "movies"."id" = ?  [["director", "James Cameron"], ["updated_at", "2022-10-24 21:55:49.331167"], ["id", 2]]
+  [1m[36m (61.6ms)[0m  [1mcommit transaction[0m
+Redirected to https://abrahamgibson-ravioliparlor-3000.codio.io/movies/2
+Completed 302 Found in 67ms (ActiveRecord: 62.0ms)
+
+
+Started GET "/movies/2" for 160.39.159.209 at 2022-10-24 21:55:49 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.1ms)
